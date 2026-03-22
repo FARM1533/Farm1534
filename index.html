@@ -6,27 +6,126 @@
     <title>DE FAMILY FARM</title>
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, sans-serif;
-            background: #0a0a0a;
-            color: white;
-            text-align: center;
+            background: #0b0f0c;
+            color: #ffffff;
+            line-height: 1.6;
         }
 
         header {
-            padding: 20px;
             background: #111;
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 2px solid #1f3d2b;
         }
 
-        img {
+        header img {
             width: 120px;
             height: auto;
             margin-bottom: 10px;
         }
 
-        h1 {
-            margin: 10px 0;
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
         }
 
-        .container
+        header p {
+            color: #9ccc9c;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .section {
+            background: #151a17;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #1f3d2b;
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            color: #6ee7a8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #111;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a.button:hover {
+            background: #256628;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="logo.jpg" alt="Farm Logo">
+        <h1>DE FAMILY FARM</h1>
+        <p>Fresh • Organic • Reliable</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <div class="section">
+            <h2>About Us</h2>
+            <p>
+                DE FAMILY FARM is dedicated to providing high-quality farm produce.
+                We focus on freshness, sustainability, and trust.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Our Products</h2>
+            <p>
+                We offer poultry, vegetables, livestock, and other farm products
+                directly from our farm to you.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>Phone: +234 XXX XXX XXXX</p>
+            <p>Email: your@email.com</p>
+
+            <!-- Optional button -->
+            <a class="button" href="#">Contact Now</a>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 DE FAMILY FARM. All rights reserved.
+    </footer>
+
+</body>
+</html>
