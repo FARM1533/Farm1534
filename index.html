@@ -32,6 +32,23 @@
     .product-item h3 { color: #a63f00; margin-bottom: 10px; }
     .product-item p { font-size: 0.95rem; }
 
+    /* Gallery Section */
+    #gallery { padding: 50px 20px; text-align: center; }
+    #gallery h2 { font-size: 2rem; color: #a63f00; margin-bottom: 30px; }
+    .gallery-container { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+    .gallery-container img {
+      width: 250px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
     /* Contact Section */
     .contact { padding: 50px 20px; text-align: center; }
     .contact h2 { font-size: 2rem; color: #a63f00; margin-bottom: 20px; }
@@ -83,12 +100,23 @@
     </div>
   </section>
 
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Our Farm Gallery</h2>
+    <div class="gallery-container">
+      <img src="images/chicken1.jpg" alt="Chicken">
+      <img src="images/farm_group1.jpg" alt="Farm Team">
+      <img src="images/vegetables.jpg" alt="Fresh Vegetables">
+      <!-- Add more images here -->
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section class="contact">
     <h2>Contact Us</h2>
     <p>Phone: +234 91 5868 9138</p>
     <p>Email: akeem.fatai15@gmail.com</p>
-    <p>Address: port Harcourt,Lagos, Nigeria</p>
+    <p>Address: Port Harcourt, Lagos, Nigeria</p>
   </section>
 
   <!-- Footer -->
