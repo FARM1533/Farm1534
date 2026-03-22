@@ -1,131 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DE FAMILY FARM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DE FAMILY POULTRY FARM</title>
+  <style>
+    /* Reset & Fonts */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+    body { background: #fff8f0; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* Header / Logo */
+    header { background: #f8e4d4; padding: 20px 0; text-align: center; }
+    header img { width: 200px; max-width: 80%; }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0b0f0c;
-            color: #ffffff;
-            line-height: 1.6;
-        }
+    /* Hero Section */
+    .hero { background: #ffd9b3; padding: 50px 20px; text-align: center; }
+    .hero h1 { font-size: 2.5rem; color: #a63f00; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; font-weight: bold; }
 
-        header {
-            background: #111;
-            text-align: center;
-            padding: 30px 20px;
-            border-bottom: 2px solid #1f3d2b;
-        }
+    /* About Section */
+    .about { padding: 50px 20px; max-width: 900px; margin: auto; text-align: center; }
+    .about h2 { font-size: 2rem; color: #a63f00; margin-bottom: 20px; }
+    .about p { font-size: 1.1rem; }
 
-        header img {
-            width: 120px;
-            height: auto;
-            margin-bottom: 10px;
-        }
+    /* Products Section */
+    .products { background: #fff0e0; padding: 50px 20px; text-align: center; }
+    .products h2 { font-size: 2rem; color: #a63f00; margin-bottom: 30px; }
+    .product-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+    .product-item { background: #fff8f0; padding: 20px; border-radius: 10px; width: 200px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .product-item h3 { color: #a63f00; margin-bottom: 10px; }
+    .product-item p { font-size: 0.95rem; }
 
-        header h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
+    /* Contact Section */
+    .contact { padding: 50px 20px; text-align: center; }
+    .contact h2 { font-size: 2rem; color: #a63f00; margin-bottom: 20px; }
+    .contact p { font-size: 1.1rem; margin: 5px 0; }
 
-        header p {
-            color: #9ccc9c;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .section {
-            background: #151a17;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #1f3d2b;
-        }
-
-        .section h2 {
-            margin-bottom: 10px;
-            color: #6ee7a8;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #111;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #888;
-        }
-
-        a.button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #2e7d32;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        a.button:hover {
-            background: #256628;
-        }
-    </style>
+    /* Footer */
+    footer { background: #f8e4d4; padding: 20px; text-align: center; font-size: 0.9rem; color: #333; }
+  </style>
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <img src="logo.jpg" alt="Farm Logo">
-        <h1>DE FAMILY FARM</h1>
-        <p>Fresh • Organic • Reliable</p>
-    </header>
+  <!-- Header / Logo -->
+  <header>
+    <img src="logo.png" alt="DE FAMILY POULTRY FARM Logo">
+  </header>
 
-    <!-- MAIN CONTENT -->
-    <div class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Premium Poultry & Fresh Produce</h1>
+    <p>Fresh • Organic • Reliable</p>
+  </section>
 
-        <div class="section">
-            <h2>About Us</h2>
-            <p>
-                DE FAMILY FARM is dedicated to providing high-quality farm produce.
-                We focus on freshness, sustainability, and trust.
-            </p>
-        </div>
+  <!-- About Section -->
+  <section class="about">
+    <h2>About DE FAMILY POULTRY FARM</h2>
+    <p>DE FAMILY POULTRY FARM is committed to delivering the highest quality poultry products with uncompromising standards in hygiene, freshness, and sustainability. Our farm practices modern poultry farming techniques, ensuring healthy livestock and nutritious products for your table.</p>
+  </section>
 
-        <div class="section">
-            <h2>Our Products</h2>
-            <p>
-                We offer poultry, vegetables, livestock, and other farm products
-                directly from our farm to you.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Contact Us</h2>
-            <p>Phone: +234 XXX XXX XXXX</p>
-            <p>Email: your@email.com</p>
-
-            <!-- Optional button -->
-            <a class="button" href="#">Contact Now</a>
-        </div>
-
+  <!-- Products Section -->
+  <section class="products">
+    <h2>Our Products</h2>
+    <div class="product-list">
+      <div class="product-item">
+        <h3>Broilers</h3>
+        <p>Fresh, healthy, and raised with care for optimal taste.</p>
+      </div>
+      <div class="product-item">
+        <h3>Layers</h3>
+        <p>High-quality eggs produced with ethical farming practices.</p>
+      </div>
+      <div class="product-item">
+        <h3>Organic Feed</h3>
+        <p>Premium feed to ensure healthy growth of our poultry.</p>
+      </div>
+      <div class="product-item">
+        <h3>Farm Tours</h3>
+        <p>See our operations firsthand and learn about sustainable farming.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-        © 2026 DE FAMILY FARM. All rights reserved.
-    </footer>
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: +234 91 5868 9138</p>
+    <p>Email: akeem.fatai15@gmail.com</p>
+    <p>Address: port Harcourt,Lagos, Nigeria</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 DE FAMILY POULTRY FARM. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
