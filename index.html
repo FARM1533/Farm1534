@@ -6,6 +6,8 @@
   <title>DE FAMILY POULTRY FARM</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
@@ -138,24 +140,46 @@
       font-weight: 600;
     }
 
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 12px 15px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
     footer {
       background: #a63f00;
       color: white;
       text-align: center;
       padding: 15px;
     }
+
+    footer a { color: white; text-decoration: none; }
+    footer a:hover { color: #fff0e6; }
+
+    /* Floating social buttons */
+    .social-floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .social-floating a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .social-floating a:hover { transform: translateY(-3px); }
+
+    .whatsapp-btn { background: #25D366; }
+    .instagram-btn { background: #C13584; }
+    .facebook-btn { background: #3b5998; }
   </style>
 </head>
 
@@ -249,11 +273,16 @@
   </form>
 </section>
 
-<a href="https://wa.me/qr/QI47S2UZ7DXED1" class="whatsapp">Chat</a>
+<!-- Floating Social Buttons -->
+<div class="social-floating">
+  <a href="https://wa.me/qr/QI47S2UZ7DXED1" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.instagram.com/tobi__fatai?igsh=ZTFpZWdlY2VhOW9y" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.facebook.com/share/18TCoSDgaC/" target="_blank" class="facebook-btn"><i class="fab fa-facebook"></i></a>
+</div>
 
 <footer>
   &copy; 2026 DE FAMILY POULTRY FARM | Quality You Can Trust
 </footer>
 
 </body>
-</html>
+  </html>
