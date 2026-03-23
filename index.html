@@ -6,6 +6,7 @@
   <title>DE FAMILY POULTRY FARM</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -50,10 +51,7 @@
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 10px;
-    }
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; }
     .hero p { font-size: 1.2rem; margin-bottom: 20px; }
 
     .cta {
@@ -113,12 +111,9 @@
     }
 
     .contact {
-      background: linear-gradient(rgba(166,63,0,0.8), rgba(166,63,0,0.8)), url('20240920_145727.jpg');
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(rgba(166,63,0,0.8), rgba(166,63,0,0.8)), url('20240920_145726.jpg');
       color: white;
       text-align: center;
-      padding: 60px 20px;
     }
 
     form {
@@ -170,11 +165,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       color: white;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       text-decoration: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: transform 0.2s;
@@ -185,14 +180,13 @@
     .whatsapp-btn { background: #25D366; }
     .instagram-btn { background: #C13584; }
     .facebook-btn { background: #3b5998; }
-
   </style>
 </head>
 
 <body>
 
 <nav>
-  <img src="logo.jpg" alt="DE FAMILY POULTRY FARM Logo">
+  <img src="logo.jpg">
   <ul>
     <li><a href="#">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -250,18 +244,18 @@
   <h2>Our Farm Gallery</h2>
   <div class="gallery-container">
 
-    <img src="20240827_005845.jpg" alt="Farm image 1">
-    <img src="20240908_073141.jpg" alt="Farm image 2">
-    <img src="20240920_145726.jpg" alt="Farm image 3">
-    <img src="20240920_145727-0.jpg" alt="Farm image 4">
-    <img src="20240920_145727.jpg" alt="Farm image 5">
-    <img src="20240920_145742.jpg" alt="Farm image 6">
-    <img src="20240920_145801.jpg" alt="Farm image 7">
-    <img src="373B5E36-7766-43F0-BEE6-8D0EDEF3378D_Original.jpg" alt="Farm image 8">
-    <img src="CFB6689B-91B3-416E-9D91-118AB8D18B98_Original.jpg" alt="Farm image 9">
-    <img src="IMG-20241002-WA0005.jpg" alt="Farm image 10">
-    <img src="IMG-20241002-WA0006.jpg" alt="Farm image 11">
-    <img src="IMG_5493.jpg" alt="Farm image 12">
+    <img src="20240827_005845.jpg">
+    <img src="20240908_073141.jpg">
+    <img src="20240920_145726.jpg">
+    <img src="20240920_145727(0).jpg">
+    <img src="20240920_145727.jpg">
+    <img src="20240920_145742.jpg">
+    <img src="20240920_145801.jpg">
+    <img src="373B5E36-7766-43F0-BEE6-8D0EDEF3378D_Original.jpg">
+    <img src="CFB6689B-91B3-416E-9D91-118AB8D18B98_Original.jpg">
+    <img src="IMG-20241002-WA0005.jpg">
+    <img src="IMG-20241002-WA0006.jpg">
+    <img src="IMG_5493.jpg">
 
   </div>
 </section>
@@ -271,24 +265,41 @@
   <p>📞 Call or WhatsApp: 09158689138</p>
   <p>📍 Available for orders, partnerships, and bulk supply.</p>
 
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message or Order Request"></textarea>
+  <!-- UPDATED FORM -->
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message or Order Request"></textarea>
     <button type="submit">Send Message</button>
   </form>
 </section>
 
 <!-- Floating Social Buttons -->
 <div class="social-floating">
-  <a href="https://wa.me/2349158689138" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
-  <a href="https://www.instagram.com/tobi__fatai/" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.facebook.com/tobi.fatai.5/" target="_blank" class="facebook-btn"><i class="fab fa-facebook"></i></a>
+  <a href="https://wa.me/qr/QI47S2UZ7DXED1" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.instagram.com/yourusername" target="_blank" class="instagram-btn"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.facebook.com/yourpage" target="_blank" class="facebook-btn"><i class="fab fa-facebook"></i></a>
 </div>
 
 <footer>
   &copy; 2026 DE FAMILY POULTRY FARM | Quality You Can Trust
 </footer>
+
+<!-- WhatsApp Script -->
+<script>
+function sendToWhatsApp() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  let url = "https://wa.me/2349158689138?text="
+    + "Name: " + encodeURIComponent(name) + "%0a"
+    + "Email: " + encodeURIComponent(email) + "%0a"
+    + "Message: " + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
   </html>
