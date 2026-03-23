@@ -1,167 +1,185 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DE FAMILY POULTRY FARM</title>
-  <style>
-    /* Reset & Fonts */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-    body { background: #fff8f0; color: #333; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
+  <title>DE FAMILY POULTRY FARM</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-    /* Header / Logo */
-    header { background: #f8e4d4; padding: 20px 0; text-align: center; }
-    header img { width: 200px; max-width: 80%; }
+    body { background: #fffaf5; color: #333; line-height: 1.6; }
 
-    /* Hero Section */
-    .hero { background: #ffd9b3; padding: 50px 20px; text-align: center; }
-    .hero h1 { font-size: 2.5rem; color: #a63f00; margin-bottom: 10px; }
-    .hero p { font-size: 1.2rem; font-weight: bold; }
+    header {
+      background: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
 
-    /* About Section */
-    .about { padding: 50px 20px; max-width: 900px; margin: auto; text-align: center; }
-    .about h2 { font-size: 2rem; color: #a63f00; margin-bottom: 20px; }
-    .about p { font-size: 1.1rem; }
+    header img { width: 180px; }
 
-    /* Products Section */
-    .products { background: #fff0e0; padding: 50px 20px; text-align: center; }
-    .products h2 { font-size: 2rem; color: #a63f00; margin-bottom: 30px; }
-    .product-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
-    .product-item { background: #fff8f0; padding: 20px; border-radius: 10px; width: 200px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .hero {
+      background: linear-gradient(rgba(166,63,0,0.8), rgba(166,63,0,0.8)), url('20240920_145726.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; }
+
+    section { padding: 60px 20px; }
+
+    h2 { text-align: center; margin-bottom: 25px; color: #a63f00; }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .products { background: #fff3e6; }
+
+    .product-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .product-item {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      width: 220px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .product-item:hover {
+      transform: translateY(-5px);
+    }
+
     .product-item h3 { color: #a63f00; margin-bottom: 10px; }
-    .product-item p { font-size: 0.95rem; }
 
-    /* Gallery Section */
-    #gallery { padding: 50px 20px; text-align: center; }
-    #gallery h2 { font-size: 2rem; color: #a63f00; margin-bottom: 30px; }
-    .gallery-container { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+    #gallery { background: #fffaf5; }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
     .gallery-container img {
-      width: 250px;
+      width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
       transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
     }
+
     .gallery-container img:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
-    /* Contact Section */
-    .contact { padding: 50px 20px; text-align: center; }
-    .contact h2 { font-size: 2rem; color: #a63f00; margin-bottom: 20px; }
-    .contact p { font-size: 1.1rem; margin: 5px 0; }
+    .contact {
+      text-align: center;
+      background: #fff3e6;
+    }
 
-    /* Footer */
-    footer { background: #f8e4d4; padding: 20px; text-align: center; font-size: 0.9rem; color: #333; }
-  </style>
-</head>
-<body>
+    .contact p { margin: 8px 0; font-size: 1.1rem; }
 
-  <!-- Header / Logo -->
-  <header>
-    <img src="logo.jpg" alt="DE FAMILY POULTRY FARM Logo">
-  </header>
+    footer {
+      background: #a63f00;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Premium Poultry & Fresh Produce</h1>
-    <p>Fresh • Organic • Reliable</p>
-  </section>
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+    }
+  </style></head><body><header>
+  <img src="logo.jpg" alt="DE FAMILY POULTRY FARM Logo">
+</header><section class="hero">
+  <h1>Fresh, Healthy & Trusted Poultry Products</h1>
+  <p>Supplying Quality Eggs & Broilers Across Nigeria</p>
+</section><section class="about">
+  <h2>About Us</h2>
+  <p>
+    DE FAMILY POULTRY FARM is dedicated to delivering premium poultry products with high standards in hygiene, nutrition, and sustainability. 
+    We focus on raising healthy birds using modern farming techniques to ensure our customers get the best quality at all times.
+  </p>
+</section><section class="products">
+  <h2>Our Products</h2>
+  <div class="product-list">
+    <div class="product-item">
+      <h3>Broilers</h3>
+      <p>Well-raised chickens ready for consumption and sale.</p>
+    </div><div class="product-item">
+  <h3>Layers & Eggs</h3>
+  <p>Fresh, nutritious eggs produced daily.</p>
+</div>
 
-  <!-- About Section -->
-  <section class="about">
-    <h2>About DE FAMILY POULTRY FARM</h2>
-    <p>DE FAMILY POULTRY FARM is committed to delivering the highest quality poultry products with uncompromising standards in hygiene, freshness, and sustainability. Our farm practices modern poultry farming techniques, ensuring healthy livestock and nutritious products for your table.</p>
-  </section>
+<div class="product-item">
+  <h3>Organic Feed</h3>
+  <p>Quality feed for strong and healthy poultry growth.</p>
+</div>
 
-  <!-- Products Section -->
-  <section class="products">
-    <h2>Our Products</h2>
-    <div class="product-list">
-      <div class="product-item">
-        <h3>Broilers</h3>
-        <p>Fresh, healthy, and raised with care for optimal taste.</p>
-      </div>
-      <div class="product-item">
-        <h3>Layers</h3>
-        <p>High-quality eggs produced with ethical farming practices.</p>
-      </div>
-      <div class="product-item">
-        <h3>Organic Feed</h3>
-        <p>Premium feed to ensure healthy growth of our poultry.</p>
-      </div>
-      <div class="product-item">
-        <h3>Farm Tours</h3>
-        <p>See our operations firsthand and learn about sustainable farming.</p>
-      </div>
-    </div>
-  </section>
+<div class="product-item">
+  <h3>Farm Tours</h3>
+  <p>Visit our farm and experience our operations firsthand.</p>
+</div>
 
-  <!-- Farm Sales Insights Section -->
-  <section class="products">
-    <h2>Farm Sales Insights</h2>
-    <div class="product-list">
-      <div class="product-item">
-        <h3>💰 Total Sales</h3>
-        <p>₦766,000</p>
-      </div>
-      <div class="product-item">
-        <h3>🥚 Best-Selling Product</h3>
-        <p>Eggs</p>
-      </div>
-      <div class="product-item">
-        <h3>📍 Top Customer Location</h3>
-        <p>Lagos</p>
-      </div>
-    </div>
+  </div>
+</section><section class="products">
+  <h2>Farm Insights</h2>
+  <div class="product-list">
+    <div class="product-item">
+      <h3>Total Sales</h3>
+      <p>₦766,000</p>
+    </div><div class="product-item">
+  <h3>Top Product</h3>
+  <p>Eggs</p>
+</div>
 
-    <div style="margin-top: 40px; text-align: center;">
-      <h3>Sales Revenue by Product & Location</h3>
-      <img src="farm-sales-chart.jpeg" alt="Sales Revenue Chart" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-      <p style="margin-top: 20px; font-size: 1rem;">
-        ✅ Eggs are our top seller.<br>
-        📍 Most sales come from Lagos.<br>
-        📈 March 5th had the highest revenue: ₦405,000.
-      </p>
-    </div>
-  </section>
+<div class="product-item">
+  <h3>Top Location</h3>
+  <p>Lagos</p>
+</div>
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2>Our Farm Gallery</h2>
-    <div class="gallery-container">
-      <img src="20240827_005845.jpg" alt="Farm Photo 1">
-      <img src="20240908_073141.jpg" alt="Farm Photo 2">
-      <img src="20240920_145726.jpg" alt="Farm Photo 3">
-      <img src="20240920_145727(0).jpg" alt="Farm Photo 4">
-      <img src="20240920_145727.jpg" alt="Farm Photo 5">
-      <img src="20240920_145742.jpg" alt="Farm Photo 6">
-      <img src="20240920_145801.jpg" alt="Farm Photo 7">
-      <img src="373B5E36-7766-43F0-BEE6-8D0EDEF3378D_Original.jpg" alt="Farm Photo 8">
-      <img src="CFB6689B-91B3-416E-9D91-118AB8D18B98_Original.jpg" alt="Farm Photo 9">
-      <img src="IMG-20241002-WA0005.jpg" alt="Farm Photo 10">
-      <img src="IMG-20241002-WA0006.jpg" alt="Farm Photo 11">
-      <img src="IMG_5493.jpg" alt="Farm Photo 12">
-      <img src="Screenshot_20241014-094940_Video Player.jpg" alt="Farm Photo 13">
-      <img src="logo.jpg" alt="Farm Logo">
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Phone: +234 91 5868 9138</p>
-    <p>Email: akeem.fatai15@gmail.com</p>
-    <p>Address: Port Harcourt, Lagos, Nigeria</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 DE FAMILY POULTRY FARM. All Rights Reserved.
-  </footer>
-
-</body>
-</html>
+  </div>  <div style="margin-top: 40px; text-align: center;">
+    <h3>Sales Overview</h3>
+    <img src="farm-sales-chart.png" alt="Sales Chart" style="max-width: 90%; border-radius: 10px; margin-top: 10px;">
+  </div>
+</section><section id="gallery">
+  <h2>Farm Gallery</h2>
+  <div class="gallery-container">
+    <img src="20240827_005845.jpg">
+    <img src="20240908_073141.jpg">
+    <img src="20240920_145726.jpg">
+    <img src="20240920_145727(0).jpg">
+    <img src="20240920_145727.jpg">
+    <img src="20240920_145742.jpg">
+    <img src="20240920_145801.jpg">
+    <img src="373B5E36-7766-43F0-BEE6-8D0EDEF3378D_Original.jpg">
+    <img src="CFB6689B-91B3-416E-9D91-118AB8D18B98_Original.jpg">
+    <img src="IMG-20241002-WA0005.jpg">
+    <img src="IMG-20241002-WA0006.jpg">
+    <img src="IMG_5493.jpg">
+  </div>
+</section><section class="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Phone:</strong> +234 91 5868 9138</p>
+  <p><strong>Email:</strong> akeem.fatai15@gmail.com</p>
+  <p><strong>Location:</strong> Lagos, Nigeria</p>
+</section><footer>
+  &copy; 2026 DE FAMILY POULTRY FARM. All Rights Reserved.
+</footer></body>
+       </html>
